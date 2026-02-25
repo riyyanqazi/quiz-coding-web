@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&display=swap");
 
+<<<<<<< HEAD
 * {
     margin: 0;
     padding: 0;
@@ -73,4 +74,49 @@ body {
 }
 .start-btn:hover {
     box-shadow: 0 8px 16px rgba(255, 140, 0, 0.4);
+=======
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+     font-family: "LXGW WenKai Mono TC", monospace;
+ 
+
+    
+   
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: radial-gradient(
+    125% 125% at 50% 100%,
+    #000000 40%,
+    #010133 100%
+  );
+  color: aliceblue;
+}
+
+.quiz-sec{
+    padding: 70px;
+}
+
+
+.quiz{
+    border: 2px solid rgb(169, 169, 169);
+    background-color:transparent;
+    border-radius: 10px;
+    padding-bottom: 10px;
+}
+
+/* start-quiz */
+.start-quiz{
+     background-color: rgb(186, 124, 0);
+    border: none;
+    border-radius: 10px;
+    padding: 8px;
+    color: black;
+
+>>>>>>> c33ae03f49a8fa7a624dd812721571117dcc1512
 }
