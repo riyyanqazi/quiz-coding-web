@@ -56,85 +56,88 @@ const htmlQuiz = [
     answer: "style",
   },
 ];
+let score = 0;
+let oneQuestion = 5;
 
-let progress_fill = document.querySelector('.progress-bar-custom .progress-fill') 
+let userAnser = [];
+let Score = 0;
+let allAnswer = [];
+const correctAnswers = htmlQuiz.map((q) => q.answer);
+console.log(correctAnswers);
 
-let  next_btn  = document.querySelector('.next-btn')
+let progress_fill = document.querySelector(
+  ".progress-bar-custom .progress-fill",
+);
 
+let next_btn = document.querySelector(".next-btn");
 let question = document.querySelector("h4");
 let options = document.querySelectorAll(".answer-box .ans");
-let timer = document.querySelector('.timer')
+let timer = document.querySelector(".timer");
 
-// let b= options[0].[0]
-// console.log(b);
-
-// let a =0
-
-let count=0;
-let questionsCount= 0
+let count = 0;
+let questionsCount = 0;
 let question_count = document.querySelector(".quiz-card .question-count span");
 let time;
 if (window.location.href.includes("quizstart.html")) {
-   time= 7
-setInterval(()=>{
-  timer.innerText=`Timer : ${time}`
-  time--
-if(time<5) {
-  timer.style.color='red'
-  time=7  
-} else if(time==0) {
+  time = 7;
+  setInterval(() => {
+    timer.innerText = `Timer : ${time}`;
+    time--;
+    if (time < 5) {
+      timer.style.color = "red";
+      time = 7;
+    } else if (time == 0) {
+    }
+  }, 1000);
 }
-},1000)
-}
-// let timer=30
 
-  question.innerText = htmlQuiz[questionsCount].question;
-     options.forEach((e, val) => {
-      console.log(questionsCount);
-      
-      options[val].innerText = htmlQuiz[questionsCount].options[val];
-      options[val].innerText = htmlQuiz[questionsCount].options[val];
-      options[val].innerText = htmlQuiz[questionsCount].options[val];
-      options[val].innerText = htmlQuiz[questionsCount].options[val];
-  
- })
-  
+let num = 0;
+question.innerText = htmlQuiz[questionsCount].question;
+options.forEach((e, val) => {
+  options[val].addEventListener("click", (e) => {
+    userAnser.push(e.target.innerText);
+    if (userAnser[val] === correctAnswers[val]) {
+      score += oneQuestion;
+
+      console.log(score);
+    } else {
+      console.log(`false`);
+    }
+  });
+
+  options[val].innerText = htmlQuiz[questionsCount].options[val];
+  options[val].innerText = htmlQuiz[questionsCount].options[val];
+  options[val].innerText = htmlQuiz[questionsCount].options[val];
+  options[val].innerText = htmlQuiz[questionsCount].options[val];
+});
+
 // next btn
-let call =  next_btn.addEventListener('click',()=>{
-  time=15
-    timer.style.color='white'
+next_btn.addEventListener("click", () => {
+  time = 15;
+  timer.style.color = "white";
 
-  let  a= 10   
-  count+=a
-  questionsCount++
-  
-  progress_fill.style.width=`${count}%` 
+  let a = 10;
+  count += a;
+  questionsCount++;
+
+  if(questionsCount>=htmlQuiz.length) {
+alert(`Quiz Completed ${score}`)
+}
+  progress_fill.style.width = `${count}%`;
   question_count.innerText = questionsCount;
 
   question.innerText = htmlQuiz[questionsCount].question;
-  
 
-  if(count==100) {
-      count=0
-    }
-    
-    options.forEach((e, val) => {
-      console.log(questionsCount);
-      
-      options[val].innerText = htmlQuiz[questionsCount].options[val];
-      options[val].innerText = htmlQuiz[questionsCount].options[val];
-      options[val].innerText = htmlQuiz[questionsCount].options[val];
-      options[val].innerText = htmlQuiz[questionsCount].options[val];
-      
-      options[val].addEventListener("click", (e) => {
-        let usersans = e.target.innerText;
-        console.log(usersans);
-        if (usersans === htmlQuiz[0].answer) {
-        } else {
-          console.log("false");
-        }
-      });
-    });
-  })
-progress_fill.style.width=`${0}%`
+  if (count == 100) {
+    count = 0;
+  }
 
+  options.forEach((e, val) => {
+    options[val].innerText = htmlQuiz[questionsCount].options[val];
+    options[val].innerText = htmlQuiz[questionsCount].options[val];
+    options[val].innerText = htmlQuiz[questionsCount].options[val];
+    options[val].innerText = htmlQuiz[questionsCount].options[val];
+  });
+});
+
+progress_fill.style.width = `${0}%`;
