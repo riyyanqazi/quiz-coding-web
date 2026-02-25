@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&display=swap");
 
-<<<<<<< HEAD
 * {
     margin: 0;
     padding: 0;
@@ -74,7 +73,6 @@ body {
 }
 .start-btn:hover {
     box-shadow: 0 8px 16px rgba(255, 140, 0, 0.4);
-=======
 
 *{
     margin: 0px;
@@ -118,5 +116,4 @@ body {
     padding: 8px;
     color: black;
 
->>>>>>> c33ae03f49a8fa7a624dd812721571117dcc1512
 }
