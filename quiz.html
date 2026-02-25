@@ -1,72 +1,76 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz</title>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&display=swap">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&display=swap"
+    />
 
-    <link rel="stylesheet" href="quiz.css">
-</head>
-<body>
-<section class="quiz-sec d-flex align-items-center px-4">
-    <div class="container">
+    <link rel="stylesheet" href="quiz.css" />
+  </head>
+  <body>
+    <section class="quiz-sec d-flex align-items-center px-4">
+      <div class="container">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-7 col-lg-5">
-                <div class="quiz-card p-4 p-md-5">
+          <div class="col-12 col-md-7 col-lg-5">
+            <div class="quiz-card p-4 p-md-5">
+              <!-- Header -->
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <img
+                  src="./assets/img/html.webp"
+                  alt="HTML Logo"
+                  class="quiz-logo"
+                />
+                <h2 class="mb-0 fw-bold">HTML Quiz</h2>
+              </div>
 
-                    <!-- Header -->
-                    <div class="d-flex align-items-center gap-3 mb-3">
-                        <img src="./assets/img/html.webp" alt="HTML Logo" class="quiz-logo">
-                        <h2 class="mb-0 fw-bold">HTML Quiz</h2>
-                    </div>
+              <p class="text-light opacity-75 mb-4">
+                Please review the assessment details before starting the test.
+              </p>
 
-                    <p class="text-light opacity-75 mb-4">
-                        Please review the assessment details before starting the test.
-                    </p>
+              <!-- Test Details -->
+              <h5 class="mb-3 fw-semibold">Test Details</h5>
 
-                    <!-- Test Details -->
-                    <h5 class="mb-3 fw-semibold">Test Details</h5>
-
-                    <div class="quiz-details">
-                        <div class="detail-item">
-                            <span>Questions</span>
-                            <strong>15</strong>
-                        </div>
-
-                        <div class="detail-item">
-                            <span>Format</span>
-                            <strong>MCQ</strong>
-                        </div>
-
-                        <div class="detail-item">
-                            <span>Time Limit</span>
-                            <strong>4:00 Minutes</strong>
-                        </div>
-
-                        <div class="detail-item">
-                            <span>Passing Score</span>
-                            <strong>95%+</strong>
-                        </div>
-                    </div>
-<a class="linkquiz" href="./quizstart.html">
-
-    <button class="btn start-btn w-100 mt-4">
-        Start Quiz
-    </button>
-</a>
-
+              <div class="quiz-details">
+                <div class="detail-item">
+                  <span>Questions</span>
+                  <strong>15</strong>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
 
+                <div class="detail-item">
+                  <span>Format</span>
+                  <strong>MCQ</strong>
+                </div>
+
+                <div class="detail-item">
+                  <span>Time Limit</span>
+                  <strong>4:00 Minutes</strong>
+                </div>
+
+                <div class="detail-item">
+                  <span>Passing Score</span>
+                  <strong>95%+</strong>
+                </div>
+              </div>
+<a href="./quizstart.html" onclick="return timer(event)">
+  <button class="btn start-btn w-100 mt-4">Start Quiz</button>
+</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>

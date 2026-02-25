@@ -44,7 +44,6 @@ body {
 
 .progress-fill {
   height: 100%;
-  width: 20%; /* Change dynamically later */
   background: linear-gradient(90deg, #ffb300, #ff7b00);
   border-radius: 20px;
 }
@@ -83,4 +82,7 @@ body {
 .next-btn:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(255, 140, 0, 0.4);
+}
+.timer{
+  font-size: 24px;
 }
