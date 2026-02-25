@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&display=swap");
+
+*{
+
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+     font-family: "LXGW WenKai Mono TC", monospace;
+ 
+
+    
+   
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: radial-gradient(
+    125% 125% at 50% 100%,
+    #000000 40%,
+    #010133 100%
+  );
+  color: aliceblue;
+}
+
+
+.hero-sec{
+    padding-top: 100px;
+}
+.hero-sec-heading{
+    color: aliceblue;
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+
+/* hero-para */
+.hero-para{
+    color: aliceblue;
+    max-width: 590px;
+}
+
+.Core-Programming{
+    padding-top: 40px;
+
+}
+/* .lang-name */
+.lang-name{
+    font-weight: bolder;
+}
+.c-lang{
+    padding: 20px;
+background-color: #000000;
+border: 1px solid #9e8f8f;
+border-radius: 10px;
+}
+
+.imgc{
+    width: 60px;
+}
+.Start-quiz{
+    background-color: rgb(186, 124, 0);
+    border: none;
+    border-radius: 10px;
+    padding: 4px;
+    color: black;
+}
+/* .level */
+.level{
+ background-color: rgb(29, 28, 26);
+ height: fit-content;
+ border-radius: 10px;
+ padding: 6px;
+}
+/* .stack-name */
+.stack-name{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* Start-quiz-now */
+.Start-quiz-now{
+background-color: transparent;
+color: whitesmoke;
+border: none;
+}

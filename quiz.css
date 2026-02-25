@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "LXGW WenKai Mono TC", monospace;
+}
+
+body {
+    min-height: 100vh;
+    background: radial-gradient(
+        120% 120% at 50% 100%,
+        #000000 40%,
+        #02024f 100%
+    );
+    color: white;
+}
+
+/* Center section vertically */
+.quiz-sec {
+    min-height: 100vh;
+}
+
+/* Glass card */
+.quiz-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    transition: 0.3s ease;
+}
+
+.quiz-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Logo */
+.quiz-logo {
+    width: 45px;
+}
+
+/* Details section */
+.quiz-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 15px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    font-size: 15px;
+}
+
+/* Button */
+.start-btn {
+    background: linear-gradient(135deg, #ffb300cb, #ff7b00);
+    border: none;
+    border-radius: 12px;
+    padding: 12px;
+    font-weight: 600;
+    color: black;
+    transition: 0.3s ease;
+}
+.linkquiz{
+  color: black;
+
+}
+.start-btn:hover {
+    box-shadow: 0 8px 16px rgba(255, 140, 0, 0.4);
+}
