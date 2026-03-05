@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/img/weblogo.png" type="image/x-icon">
+    <title>Profile</title>
+<style>
+body{
+    background-color: #313131;
+    font-family: cursive;
+color: whitesmoke;
+}
+.result-container {
+    text-align: center;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.score-box {
+    font-size: 2rem;
+    margin: 20px 0;
+    color: #ffb300; /* Matching your orange border color */
+    font-weight: bold;
+}
+
+button {
+    padding: 10px 25px;
+    background: #6c42ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    <div class="result-container">
+    <h1>Quiz Completed!</h1>
+    <div class="score-box">
+        <p>Your Score: <span id="display-score">0</span> / <span id="display-total">0</span></p>
+    </div>
+    <button onclick="window.location.href='index.html'">Try Again</button>
+</div>
+
+<script>
+    
+    const savedScore = localStorage.getItem("userScore");
+    const total = localStorage.getItem("totalQuiz");
+
+    document.getElementById("display-score").innerText = savedScore;
+    document.getElementById("display-total").innerText = total;
+</script>
+
+</body>
+</html>
